@@ -1,4 +1,4 @@
-package chapter01;
+package daniel_y_liang.chapter01;
 
 public class Exercise104 {
     public static void main(String[] args) {
