@@ -1,0 +1,1 @@
+My diary of learning Java.
