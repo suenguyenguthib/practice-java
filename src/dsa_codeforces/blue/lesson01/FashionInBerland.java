@@ -14,7 +14,7 @@ public class FashionInBerland {
         }
 
         if (n == 1) {
-            System.out.println(buttons.get(0) == 1 ? "YES" : "NO");
+            System.out.println(buttons.getFirst() == 1 ? "YES" : "NO");
         }
 
         else {
