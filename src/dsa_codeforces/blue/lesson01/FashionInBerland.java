@@ -5,27 +5,27 @@ import java.util.ArrayList;
 
 public class FashionInBerland {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        int n = input.nextInt();
+        Scanner scanner = new Scanner(System.in);
 
+        int n = scanner.nextInt();
         ArrayList<Integer> buttons = new ArrayList<>();
         for (int i = 0; i < n; i++) {
-            buttons.add(input.nextInt());
+            buttons.add(scanner.nextInt());
         }
 
-        if (n == 1) {
+        if (buttons.size() == 1) {
             System.out.println(buttons.getFirst() == 1 ? "YES" : "NO");
         }
 
         else {
-            int countUnfastenedButton = 0;
-            for (int i = 0; i < n; i++) {
-                if (buttons.get(i) == 0) {
-                    countUnfastenedButton++;
-                }
+            int count = 0;
+            for (Integer i : buttons) {
+                if (i == 0)
+                    count++;
             }
-
-            System.out.println(countUnfastenedButton == 1 ? "YES" : "NO");
+            System.out.println(count == 1 ? "YES" : "NO");
         }
+
+        scanner.close();
     }
 }

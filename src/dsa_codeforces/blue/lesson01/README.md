@@ -12,80 +12,46 @@ Now all elements are retained in the new array which is in the specified array d
 and the rest are added after them in a newly formed way.
 This array keeps on growing dynamically.
 
-### Initialization
+Common methods:
 
-```
-    ArrayList<Class> variable = new ArrayList<Class>();
-```
+- Initialization: `ArrayList<Object> arrayName = new ArrayList<>();`
+- `boolean add(E e)`
+- `void add(int index, E element)`
+- `void clear()`
+- `Object clone()`
+- `boolean contains(Object o)`
+- `void ensureCapacity(int minCapacity)`
+- `E get(int index)`
+- `int indexOf(Object o)`
+- `boolean isEmpty()`
+- `int lastIndexOf(Object o)`
+- `E remove(int index)`
+- `boolean remove(Object o)`
+- `E set(int index, E element)`
+- `int size()`
+- `List<E> subList(int fromIndex, int toIndex)`
+- `Object[] toArray()`
+- `void trimToSize()`
 
-Example: `ArrayList<Integer> arr = new ArrayList<Integer>();`
+## Strings
 
-### Adding elements
+A string is a sequence of characters.
 
-```
-    add(Class element)
-```
+Common methods:
 
-Example: `arr.add(5);`
-
-### Inserting element at a specific index
-
-```
-    add(int index, Class element)
-```
-
-Example: `arr.add(2, 9)`
-
-### Getting size of the array
-
-```
-    size()
-```
-
-Example: `arr.size();`
-
-### Getting and setting at a specified index
-
-```
-    get(int index)
-    set(int index, Class element)
-```
-
-Example:
-
-```
-    int value = arr.get(2);
-    a.set(2, 3);
-```
-
-### Removing element at a specified index
-
-```
-    remove(int index)
-```
-
-Example: `arr.remove(arr.size() - 1);`
-
-### Clearing the entire array
-
-```
-    clear()
-```
-
-Example: `arr.clear();`
-
-### Getting the sublist of the current array
-
-```
-    subList(int fromIndex, int toIndex)
-```
-
-Example: `arr.subList(2, 5);`
-
-### Checking the emptiness of the array
-
-```
-    isEmpty()
-```
-
-Example: `arr.isEmpty();`
+- Initialization: `String variableName = "";`
+- `char charAt(int index)`
+- `int codePointAt(int index)` (Unicode code point)
+- `int codePointBefore(int index)` (Unicode code point)
+- `int codePointCount(int beginIndex, int endIndex)` (Unicode code point)
+- `int compareTo(String anotherString)`: Compares two strings lexicographically
+- `int compareToIgnoreString(String anotherString)`: Compares two strings lexicographically ignoring case differences
+- `String concat(String str)`
+- `int indexOf(String str)`
+- `boolean isEmpty()`
+- `int length()`
+- `boolean matches(String regex)`: [regular expression](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html#sum)
+- `boolean isLetter(char c)`
+- `boolean isDigit(char c)`
+- `boolean isLowerCase(char c)`
+- `boolean isUpperCase(char c)`
