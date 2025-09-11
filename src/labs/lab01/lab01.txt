@@ -1,0 +1,36 @@
+Question 1:
+
+5 * 2
+10
+
+2 + 20 * 10
+202
+
+(2 - 20) * 10
+-180
+
+a.
++ is addition operator
+- is subtraction operator
+* is multiplication operator
+b.
+Java evaluates the operators * first before it moves onto + and -, just like
+mathematics.
+
+Question 2:
+
+5 - 2
+3
+Type: int
+
+5 - 2.0
+3.0
+Type: double
+
+6.0 - 5
+1.0
+Type: double
+
+6.0 - 5.0
+1.0
+Type: double
