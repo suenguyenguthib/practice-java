@@ -42,3 +42,19 @@ The `Stack` interface that is implemented by the `ArrayStack` and `LinkedStack` 
 - `int search(AnyType element)`
 - `int size()`
 - `String toString()`
+
+Visualization of `Stack`:
+
+```
+				  Position:
+		+-----+
+		| abc |    1      --> Top of stack: Where all the operations happen. Follow the LIFO principle: Last In First Out
+		+-----+
+		| def |    2
+		+-----+
+		| adf |    3
+		+-----+
+		| ghi |    4
+		+-----+
+
+```
