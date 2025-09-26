@@ -4,7 +4,7 @@ package data_structures.lists;
  * A generic queue interface.
  * @param <AnyType> type of elements stored in this queue
  */
-public interface Queues<AnyType> {
+public interface Queue<AnyType> {
 	
 	/**
 	 * Returns true if the queue is empty and false otherwise.

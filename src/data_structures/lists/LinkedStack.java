@@ -149,7 +149,7 @@ public class LinkedStack<AnyType> implements Stack<AnyType> {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println("DEMO FOR A STACK, IMPLEMENTATION USING ARRAY");
+		System.out.println("DEMO FOR A STACK, IMPLEMENTATION USING LINKED LIST");
 		
 		// Create an empty stack
 		LinkedStack<Integer> s = new LinkedStack<>();
@@ -162,9 +162,9 @@ public class LinkedStack<AnyType> implements Stack<AnyType> {
 		System.out.println("Push: " + s.push(62));
 		System.out.println(s.toString());
 		
-		// Look for index
-		System.out.println("Index of 84: " + s.search(84));
-		System.out.println("Index of 100: " + s.search(100));
+		// Look for position
+		System.out.println("Position of 84: " + s.search(84));
+		System.out.println("Position of 100: " + s.search(100));
 		
 		// Pop two elements
 		System.out.println("Pop 1st time: " + s.pop());
