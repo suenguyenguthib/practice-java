@@ -163,5 +163,8 @@ public class LinkedStack<AnyType> {
 		System.out.println("Pop 1st time: " + s.pop());
 		System.out.println("Pop 2nd time: " + s.pop());
 		System.out.println(s.toString());
+		
+		// Peek
+		System.out.println("Peek: " + s.peek());
 	}
 }

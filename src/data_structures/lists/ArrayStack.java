@@ -18,6 +18,10 @@ public class ArrayStack<AnyType> {
 	 * This can also act as a size indicator.
 	 */
 	private int topOfStack;
+	
+	/**
+	 * The default capacity of this stack.
+	 */
 	private static final int DEFAULT_CAPACITY = 10;
 	
 	/**
@@ -158,5 +162,8 @@ public class ArrayStack<AnyType> {
 		System.out.println("Pop 1st time: " + s.pop());
 		System.out.println("Pop 2nd time: " + s.pop());
 		System.out.println(s.toString());
+		
+		// Peek
+		System.out.println("Peek: " + s.peek());
 	}
 }
