@@ -110,6 +110,21 @@ public class LinkedList<AnyType> implements List<AnyType> {
 			size++;
 		}
 	}
+
+	/**
+	 * Adds the specified element to the front of the list.
+	 * @param element element to be added to front of list
+	 */
+	public void addFirst(AnyType element) {
+		Node<AnyType> newNode = new Node<>(element);
+		if (isEmpty())
+			head = newNode;
+		else {
+			newNode.next = head;
+			head = newNode;
+		}
+		size++;
+	}
 	
 	/**
 	 * Removes all elements from this list.
