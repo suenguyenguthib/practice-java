@@ -41,19 +41,24 @@ public class ArrayStack<AnyType> {
 	}
 	
 	/**
-	 * Pushes the specified element to the top of the stack.
-	 * @param element element to be pushed on top of stack
-	 * @return the value of the element that was just pushed on top of stack
+	 * Returns true if the stack is empty and false otherwise.
+	 * @return true if the stack is empty and false otherwise
 	 */
-	public AnyType push(AnyType element) {
-		if (topOfStack + 1 == stack.length)
-			ensureCapacity();
-		topOfStack++;
-		stack[topOfStack] = element;
-		return element;
+	public boolean isEmpty() {
+		return topOfStack == -1;
 	}
 	
 	/**
+	 * Returns the value of the element on top of stack without removing it.
+	 * @return value of top of stack
+	 */
+	public AnyType peek() {
+		if (isEmpty()) 
+			throw new RuntimeException("Stack is empty.");
+		return stack[topOfStack];
+	}
+	
+		/**
 	 * Removes the object from the top of this stack and returns its value.
 	 * This method throws an error if the stack is empty.
 	 * @return the value previously at the top of the stack
@@ -68,14 +73,16 @@ public class ArrayStack<AnyType> {
 	}
 	
 	/**
-	 * Returns the value at the top of the stack without removing it from the stack.
-	 * This method throws an error if the stack is empty.
-	 * @return the value at the top of the stack
+	 * Pushes the specified element onto the top of stack.
+	 * @param element element to be pushed onto stack
+	 * @return value of element to be pushed onto stack
 	 */
-	public AnyType peek() {
-		if (isEmpty()) 
-			throw new RuntimeException("Stack is empty.");
-		return stack[topOfStack];
+	public AnyType push(AnyType element) {
+		if (topOfStack + 1 == stack.length)
+			ensureCapacity();
+		topOfStack++;
+		stack[topOfStack] = element;
+		return element;
 	}
 	
 	/**
@@ -87,22 +94,14 @@ public class ArrayStack<AnyType> {
 	}
 	
 	/**
-	 * Returns true if the stack is empty and false otherwise.
-	 * @return true if the stack is empty and false otherwise
-	 */
-	public boolean isEmpty() {
-		return topOfStack == -1;
-	}
-	
-	/**
-	 * Returns the 1-based position where an object is on this stack.
+	 * Returns the 1-based position from top where an object is on this stack.
 	 * @param element element whose presence is to be found
-	 * @return the 1-based position where an object is on this stack
+	 * @return the 1-based position from top where an object is on this stack
 	 */
 	public int search(AnyType element) {
 		for (int i = topOfStack; i >= 0; i--) {
 			if (Objects.equals(stack[i], element))
-				return i + 1;
+				return topOfStack - i + 1;
 		}
 		return -1;
 	}
@@ -144,11 +143,11 @@ public class ArrayStack<AnyType> {
 		ArrayStack<Integer> s = new ArrayStack<>();
 		
 		// Push elements into stack
-		s.push(84);
-		s.push(15);
-		s.push(57);
-		s.push(39);
-		s.push(62);
+		System.out.println("Push: " + s.push(84));
+		System.out.println("Push: " + s.push(15));
+		System.out.println("Push: " + s.push(57));
+		System.out.println("Push: " + s.push(39));
+		System.out.println("Push: " + s.push(62));
 		System.out.println(s.toString());
 		
 		// Look for index
