@@ -6,7 +6,7 @@ import java.util.Objects;
  * Implements a stack using linked list.
  * @param <AnyType> type of the elements in this stack
  */
-public class LinkedStack<AnyType> {
+public class LinkedStack<AnyType> implements Stack<AnyType> {
 	
 	/**
 	 * A class to represent the nodes in this stack.

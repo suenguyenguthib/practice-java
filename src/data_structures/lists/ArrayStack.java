@@ -6,7 +6,7 @@ import java.util.Objects;
  * Implements a stack using primitive array.
  * @param <AnyType> type of the elements in this stack
  */
-public class ArrayStack<AnyType> {
+public class ArrayStack<AnyType> implements Stack<AnyType> {
 	
 	/**
 	 * This stack class uses array as the underlying data structure to store its elements.
@@ -25,7 +25,7 @@ public class ArrayStack<AnyType> {
 	private static final int DEFAULT_CAPACITY = 10;
 	
 	/**
-	 * Constructor for an empty stack.
+	 * Constructor for an empty stack with a default capacity of 10.
 	 */
 	@SuppressWarnings("unchecked")
 	public ArrayStack() {
@@ -35,6 +35,7 @@ public class ArrayStack<AnyType> {
 	
 	/**
 	 * Constructs a stack with initialized capacity.
+	 * @capacity capacity defined by user
 	 */
 	@SuppressWarnings("unchecked")
 	public ArrayStack(int capacity) {
@@ -127,7 +128,7 @@ public class ArrayStack<AnyType> {
 		return builder.toString();
 	}
 	
-	// HELPER METHODS
+	// HELPER METHOD
 	
 	/**
 	 * Creates a new stack with a size 1.5 as larger as the current size to make room for new elements.
