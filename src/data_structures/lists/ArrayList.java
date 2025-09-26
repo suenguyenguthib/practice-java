@@ -36,7 +36,9 @@ public class ArrayList<AnyType> implements List<AnyType> {
 	 */
 	@SuppressWarnings("unchecked")
 	public ArrayList(int capacity) {
-		array = (AnyType[]) new Object[capacity];
+		if (capacity < 0)
+			throw new IllegalArgumentException("Capacity cannot be negative.");
+		array = (AnyType[]) new Object[Math.max(capacity, DEFAULT_CAPACITY)];
 		size = 0;
 	}
 	
@@ -205,6 +207,10 @@ public class ArrayList<AnyType> implements List<AnyType> {
 	}
 	
 	// HELPER METHODS FOR THIS CLASS
+	
+	/**
+	 * Creates a new array with a size 1.5 larger than current size to make room for new elements.
+	 */
 	@SuppressWarnings("unchecked")
 	private void ensureCapacity() {
 		AnyType[] newArray = (AnyType[]) new Object[size + size / 2];

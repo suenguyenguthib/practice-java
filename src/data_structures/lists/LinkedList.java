@@ -11,7 +11,15 @@ public class LinkedList<AnyType> implements List<AnyType> {
 	 * @param <AnyType> type of element in the node
 	 */
 	public class Node<AnyType> {
+		
+		/**
+		 * Data stored in the node.
+		 */
 		private AnyType data;
+		
+		/**
+		 * This link references to the successor of this node.
+		 */
 		private Node<AnyType> next;
 		
 		/**
@@ -56,7 +64,7 @@ public class LinkedList<AnyType> implements List<AnyType> {
 	 * @return true
 	 */
 	public boolean add(AnyType element) {
-Node<AnyType> newNode = new Node<>(element);
+		Node<AnyType> newNode = new Node<>(element);
 		
 		// Sets head node to be this node if the list is empty
 		if (isEmpty())
