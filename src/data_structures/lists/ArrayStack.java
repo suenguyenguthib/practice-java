@@ -49,6 +49,7 @@ public class ArrayStack<AnyType> implements Stack<AnyType> {
 	 * Returns true if the stack is empty and false otherwise.
 	 * @return true if the stack is empty and false otherwise
 	 */
+	@Override
 	public boolean isEmpty() {
 		return topOfStack == -1;
 	}
@@ -57,6 +58,7 @@ public class ArrayStack<AnyType> implements Stack<AnyType> {
 	 * Returns the value of the element on top of stack without removing it.
 	 * @return value of top of stack
 	 */
+	@Override
 	public AnyType peek() {
 		if (isEmpty()) 
 			throw new RuntimeException("Stack is empty.");
@@ -68,6 +70,7 @@ public class ArrayStack<AnyType> implements Stack<AnyType> {
 	 * This method throws an error if the stack is empty.
 	 * @return the value previously at the top of the stack
 	 */
+	@Override
 	public AnyType pop() {
 		if (isEmpty()) 
 			throw new RuntimeException("Stack is empty.");
@@ -82,6 +85,7 @@ public class ArrayStack<AnyType> implements Stack<AnyType> {
 	 * @param element element to be pushed onto stack
 	 * @return value of element to be pushed onto stack
 	 */
+	@Override
 	public AnyType push(AnyType element) {
 		if (topOfStack + 1 == stack.length)
 			ensureCapacity();
@@ -94,6 +98,7 @@ public class ArrayStack<AnyType> implements Stack<AnyType> {
 	 * Returns the number of elements in this stack.
 	 * @return the number of elements in this stack
 	 */
+	@Override
 	public int size() {
 		return topOfStack + 1;
 	}
@@ -103,6 +108,7 @@ public class ArrayStack<AnyType> implements Stack<AnyType> {
 	 * @param element element whose presence is to be found
 	 * @return the 1-based position from top where an object is on this stack
 	 */
+	@Override
 	public int search(AnyType element) {
 		for (int i = topOfStack; i >= 0; i--) {
 			if (Objects.equals(stack[i], element))
@@ -115,6 +121,7 @@ public class ArrayStack<AnyType> implements Stack<AnyType> {
 	 * Returns a String representation of this stack.
 	 * @return a String representation of this stack
 	 */
+	@Override
 	public String toString() {
 		if (isEmpty()) return "[]";
 		StringBuilder builder = new StringBuilder();

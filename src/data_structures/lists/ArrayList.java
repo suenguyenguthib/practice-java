@@ -47,6 +47,7 @@ public class ArrayList<AnyType> implements List<AnyType> {
 	 * @param element element to be appended to this list
 	 * @return true
 	 */
+	@Override
 	public boolean add(AnyType element) {
 		// Increases the capacity of the array if needed.
 		if (array.length == size)
@@ -63,6 +64,7 @@ public class ArrayList<AnyType> implements List<AnyType> {
 	 * @param index index at which the specified element is to be inserted
 	 * @param element element to be inserted
 	 */
+	@Override
 	public void add(int index, AnyType element) {
 		if (index < 0 || index >= size)
 			throw new ArrayIndexOutOfBoundsException();
@@ -84,6 +86,7 @@ public class ArrayList<AnyType> implements List<AnyType> {
 	 * Removes all elements from this list.
 	 * The list will be empty after this call returns.
 	 */
+	@Override
 	public void clear() {
 		for (int i = 0; i < array.length; i++)
 			array[i] = null;
@@ -95,6 +98,7 @@ public class ArrayList<AnyType> implements List<AnyType> {
 	 * @param element element whose presence in this list is to be tested
 	 * @return true if the list contains the specified element
 	 */
+	@Override
 	public boolean contains(AnyType element) {
 		for (int i = 0; i < array.length; i++) {
 			if (array[i] == element)
@@ -108,6 +112,7 @@ public class ArrayList<AnyType> implements List<AnyType> {
 	 * @param index index whose element value to be returned
 	 * @return the value of the element at the specified position
 	 */
+	@Override
 	public AnyType get(int index) {
 		if (index < 0 || index >= size)
 			throw new ArrayIndexOutOfBoundsException();
@@ -119,6 +124,7 @@ public class ArrayList<AnyType> implements List<AnyType> {
 	 * Returns true if the list is empty.
 	 * @return true if the list is empty
 	 */
+	@Override
 	public boolean isEmpty() {
 		return size == 0;
 	}
@@ -129,6 +135,7 @@ public class ArrayList<AnyType> implements List<AnyType> {
 	 * @param element element whose first occurrence in this list is to be looked up
 	 * @return the index of the first occurrence of this element in the list
 	 */
+	@Override
 	public int indexOf(AnyType element) {
 		for (int i = 0; i < array.length; i++) {
 			if (array[i] == element)
@@ -142,6 +149,7 @@ public class ArrayList<AnyType> implements List<AnyType> {
 	 * @param index index of the element to replace
 	 * @param element element to be stored at the specified position
 	 */
+	@Override
 	public void set(int index, AnyType element) {
 		if (index < 0 || index >= size)
 			throw new ArrayIndexOutOfBoundsException();
@@ -153,6 +161,7 @@ public class ArrayList<AnyType> implements List<AnyType> {
 	 * @param element element to be removed from this list, if present
 	 * @return true if this list contained the specified element
 	 */
+	@Override
 	public boolean remove(AnyType element) {
 		int index = indexOf(element);
 		if (index == -1) return false;
@@ -167,6 +176,7 @@ public class ArrayList<AnyType> implements List<AnyType> {
 	 * @param index index of the element to be removed
 	 * @return the element previously at the specified position
 	 */
+	@Override
 	public AnyType remove(int index) {
 		if (index < 0 || index >= size)
 			throw new ArrayIndexOutOfBoundsException();
@@ -184,6 +194,7 @@ public class ArrayList<AnyType> implements List<AnyType> {
 	 * Returns the number of elements in this list.
 	 * @return the number of elements in this list
 	 */
+	@Override
 	public int size() {
 		return size;
 	}
@@ -192,6 +203,7 @@ public class ArrayList<AnyType> implements List<AnyType> {
 	 * Returns a String representation of the list.
 	 * @return a String representation of the list
 	 */
+	@Override
 	public String toString() {
 		if (isEmpty()) return "[]"; // Returns an empty list if list is empty
 		

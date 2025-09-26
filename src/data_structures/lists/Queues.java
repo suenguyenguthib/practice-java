@@ -48,5 +48,6 @@ public interface Queues<AnyType> {
 	 * Returns a String representation of this queue.
 	 * @return a String representation of this queue
 	 */
+	@Override
 	public String toString();
 }

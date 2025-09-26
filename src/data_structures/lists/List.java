@@ -89,5 +89,6 @@ public interface List<AnyType> {
 	 * Returns a String representation of the list.
 	 * @return a String representation of the list
 	 */
+	@Override
 	public String toString();
 }

@@ -48,6 +48,7 @@ public class LinkedStack<AnyType> implements Stack<AnyType> {
 	 * Returns true if the stack is empty and false otherwise.
 	 * @return true if the stack is empty and false otherwise
 	 */
+	@Override
 	public boolean isEmpty() {
 		return topOfStack == null;
 	}
@@ -56,6 +57,7 @@ public class LinkedStack<AnyType> implements Stack<AnyType> {
 	 * Returns the value of the element on top of stack without removing it.
 	 * @return value of top of stack
 	 */
+	@Override
 	public AnyType peek() {
 		if (isEmpty())
 			throw new RuntimeException("Stack is empty.");
@@ -66,6 +68,7 @@ public class LinkedStack<AnyType> implements Stack<AnyType> {
 	 * Removes the element on top of stack and returns its value.
 	 * @return value of top of stack
 	 */
+	@Override
 	public AnyType pop() {
 		if (isEmpty())
 			throw new RuntimeException("Stack is empty.");
@@ -80,6 +83,7 @@ public class LinkedStack<AnyType> implements Stack<AnyType> {
 	 * @param element element to be pushed onto stack
 	 * @return value of element to be pushed onto stack
 	 */
+	@Override
 	public AnyType push(AnyType element) {
 		Node<AnyType> newNode = new Node<>(element);
 		newNode.next = topOfStack;
@@ -94,6 +98,7 @@ public class LinkedStack<AnyType> implements Stack<AnyType> {
 	 * @param element element whose position is to be looked up
 	 * @return 1-based position from top of the specified element in the stack
 	 */
+	@Override
 	public int search(AnyType element) {
 		Node<AnyType> current = topOfStack;
 		int position = 1;
@@ -110,6 +115,7 @@ public class LinkedStack<AnyType> implements Stack<AnyType> {
 	 * Returns the number of elements in the stack.
 	 * @return number of elements in the stack
 	 */
+	@Override
 	public int size() {
 		return size;
 	}
@@ -118,6 +124,7 @@ public class LinkedStack<AnyType> implements Stack<AnyType> {
 	 * Returns a String representation of the stack.
 	 * @return a String representation of the stack
 	 */
+	@Override
 	public String toString() {
 		if (isEmpty()) return "[]";
 		
