@@ -46,9 +46,9 @@ The `Stack` interface that is implemented by the `ArrayStack` and `LinkedStack` 
 Visualization of `Stack`:
 
 ```
-				  Position:
+			   Position: Follows the LIFO principle - Last In First Out
 		+-----+
-		| abc |    1      --> Top of stack: Where all the operations happen. Follow the LIFO principle: Last In First Out
+		| abc |    1      --> Top of stack: Where all the operations happen.
 		+-----+
 		| def |    2
 		+-----+
@@ -56,5 +56,29 @@ Visualization of `Stack`:
 		+-----+
 		| ghi |    4
 		+-----+
+
+```
+The `Queue` interface that is implemented by the `ArrayQueue` and `LinkedQueue` classes includes:
+- `boolean isEmpty()`
+- `AnyType enqueue(AnyType element)`
+- `AnyType dequeue()`
+- `AnyType poll()`
+- `int search(AnyType element)`
+- `int size()`
+- `String toString()`
+
+Visualization of `Queue`:
+
+```
+				  Position: Follows the FIFO principle - First In First Out
+		+--------+
+		| Green  |    1      --> Front of queue: The only position in the queue where the elements can leave. 
+		+--------+
+		| Blue   |    2
+		+--------+
+		| Orange |    3
+		+--------+
+		| Red    |    4      --> End of queue: The only position in the queue where the elements can be inserted.
+		+--------+
 
 ```
